@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <div id="playr"></div>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+        <script>
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('playr', {
+          height: '390',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+          }
+        });
+      }
+
+      $(window).scroll(function(){
+          var win = $(window).scrollTop();
+          var h = $(window).height();
+          var pl = $('#playr').offset().top;
+          var ph = $('#playr').height();
+          if ((win < pl) && ((win + h) > (pl + ph))){
+              console.log(vid.src);
+              console.log('true');
+          }
+          else{
+              console.log('false');
+              player.pauseVideo();
+          }
+      });
+      </script>
+    </body>
+</html>
